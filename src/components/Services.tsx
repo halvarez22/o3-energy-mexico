@@ -14,7 +14,7 @@ const Services: React.FC = () => {
           {SERVICES_DATA.map((service, index) => (
             <div key={index} className="bg-[#1a1a1a] p-8 rounded-lg text-left transform hover:-translate-y-2 transition-transform duration-300">
               <div className="mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-bold mb-3 text-[#A4E834]">{service.title}</h3>
+              <h3 className="text-2xl font-bold mb-3 text-[#f36f20]">{service.title}</h3>
               <p className="text-gray-300">{service.description}</p>
             </div>
           ))}

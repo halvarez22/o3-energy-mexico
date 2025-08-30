@@ -50,7 +50,7 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0F0F0F]/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-black text-[#A4E834] flex items-center">
+        <Link to="/" className="text-2xl font-black text-[#f36f20] flex items-center">
           <span>O3</span>
           <span className="text-white"> ENERGY MEXICO</span>
         </Link>
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
           {NAV_LINKS.map((link) => {
             const isActive = isActiveLink(location.pathname, link.href);
             const className = `transition-colors duration-300 font-medium ${
-              isActive ? 'text-[#A4E834]' : 'text-white hover:text-[#A4E834]'
+              isActive ? 'text-[#f36f20]' : 'text-white hover:text-[#f36f20]'
             }`;
 
             return link.href.startsWith('#') ? (
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
                   {NAV_LINKS.map((link) => {
                       const isActive = isActiveLink(location.pathname, link.href);
                       const className = `transition-colors duration-300 font-medium block py-2 ${
-                        isActive ? 'text-[#A4E834]' : 'text-white hover:text-[#A4E834]'
+                        isActive ? 'text-[#f36f20]' : 'text-white hover:text-[#f36f20]'
                       }`;
 
                       return link.href.startsWith('#') ? (

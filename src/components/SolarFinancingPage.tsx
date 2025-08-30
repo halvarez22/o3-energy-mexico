@@ -89,7 +89,7 @@ const SolarFinancingPage: React.FC = () => {
             </p>
             <Link 
               to="/contacto" 
-              className="inline-block bg-[#A4E834] hover:bg-green-600 text-green-900 hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300"
+              className="inline-block bg-[#f36f20] hover:bg-[#d45e1b] text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300"
             >
               Solicitar Cotización
             </Link>

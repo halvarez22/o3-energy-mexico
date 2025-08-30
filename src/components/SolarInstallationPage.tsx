@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaLightbulb, FaClipboardCheck, FaTools, FaClock, FaShieldAlt, FaLeaf } from 'react-icons/fa';
+import { FaChartLine } from 'react-icons/fa6';
 
 const SolarInstallationPage: React.FC = () => {
   const features = [
@@ -49,7 +50,7 @@ const SolarInstallationPage: React.FC = () => {
             </p>
             <Link 
               to="/#contact" 
-              className="inline-block bg-[#A4E834] hover:bg-green-600 text-green-900 hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300"
+              className="inline-block bg-[#f36f20] hover:bg-[#d45e1b] text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300"
             >
               Solicitar Cotización
             </Link>

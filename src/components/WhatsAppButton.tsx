@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
 const WhatsAppButton: React.FC = () => {
-  const phoneNumber = '526147756600'; // Número de teléfono sin el signo +
+  const phoneNumber = '526143654440'; // Número de teléfono sin el signo +
   const message = 'Hola, me gustaría más información sobre sus servicios de energía solar';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -19,7 +19,7 @@ const WhatsAppButton: React.FC = () => {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        className="flex items-center justify-center w-16 h-16 rounded-full bg-[#f36f20] text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         aria-label="Chatea con nosotros por WhatsApp"
       >
         <svg

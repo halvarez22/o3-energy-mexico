@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-black text-[#A4E834]">
+            <h3 className="text-xl font-black text-[#f36f20]">
               O3<span className="text-white">ENERGY</span>
             </h3>
             <p className="mt-2">Liderando la transición energética en México.</p>
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {NAV_LINKS.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="hover:text-[#A4E834] transition-colors">
+                  <a href={link.href} className="hover:text-[#f36f20] transition-colors">
                     {link.label}
                   </a>
                 </li>

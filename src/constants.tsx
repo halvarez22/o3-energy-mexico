@@ -49,6 +49,7 @@ export const PROJECTS_DATA: Project[] = [
 ];
 
 export const TEAM_DATA: TeamMember[] = [
+    { image: "https://picsum.photos/seed/team5/400/400", name: "Brad Stutzman", title: "CEO" },
     { image: "https://picsum.photos/seed/team1/400/400", name: "Brenda Aguirre", title: "Directora Chihuahua" },
     { image: "https://picsum.photos/seed/team2/400/400", name: "David Santoyo", title: "Representante Legal y Director de Operaciones" },
     { image: "https://picsum.photos/seed/team3/400/400", name: "Alejandro Velasco", title: "Presidente" },

@@ -77,13 +77,13 @@ const Contact: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
             <div className="bg-[#1E1E1E] p-8 rounded-xl shadow-xl">
-              <h3 className="text-2xl font-bold text-[#A4E834] mb-6 flex items-center">
+              <h3 className="text-2xl font-bold text-[#f36f20] mb-6 flex items-center">
                 <FaMapPin className="mr-2" /> Oficina México
               </h3>
               
               <div className="space-y-5">
                 <div className="flex items-start">
-                  <FaMapMarkerAlt className="text-[#A4E834] mt-1 mr-3 flex-shrink-0" />
+                  <FaMapMarkerAlt className="text-[#f36f20] mr-3 flex-shrink-0" />
                   <div>
                     <p className="text-gray-300">{officeLocation.address}</p>
                     <p className="text-gray-300">{officeLocation.city}</p>
@@ -91,20 +91,20 @@ const Contact: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center">
-                  <FaPhone className="text-[#A4E834] mr-3 flex-shrink-0" />
+                  <FaPhone className="text-[#f36f20] mr-3 flex-shrink-0" />
                   <a 
                     href={`tel:${officeLocation.phone.replace(/\D/g, '')}`} 
-                    className="text-gray-300 hover:text-[#A4E834] transition-colors text-lg"
+                    className="text-gray-300 hover:text-[#f36f20] transition-colors text-lg"
                   >
                     {officeLocation.phone}
                   </a>
                 </div>
                 
                 <div className="flex items-center">
-                  <FaEnvelope className="text-[#A4E834] mr-3 flex-shrink-0" />
+                  <FaEnvelope className="text-[#f36f20] mr-3 flex-shrink-0" />
                   <a 
                     href={`mailto:${officeLocation.email}`} 
-                    className="text-gray-300 hover:text-[#A4E834] transition-colors text-lg"
+                    className="text-gray-300 hover:text-[#f36f20] transition-colors text-lg"
                   >
                     {officeLocation.email}
                   </a>
@@ -146,7 +146,7 @@ const Contact: React.FC = () => {
                   href={`https://www.google.com/maps/dir//${officeLocation.lat},${officeLocation.lng}`} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-[#A4E834] hover:underline flex items-center justify-center"
+                  className="text-[#f36f20] hover:underline flex items-center justify-center"
                 >
                   <FaMapMarkerAlt className="mr-2" />
                   Cómo llegar
@@ -156,7 +156,7 @@ const Contact: React.FC = () => {
           </div>
           
           <div className="bg-[#1E1E1E] p-8 rounded-lg shadow-2xl">
-            <h3 className="text-2xl font-bold text-[#A4E834] mb-6">Envíanos un mensaje</h3>
+            <h3 className="text-2xl font-bold text-[#f36f20] mb-6">Envíanos un mensaje</h3>
             
             <Formik
               initialValues={{ name: '', email: '', phone: '', message: '' }}
@@ -179,7 +179,7 @@ const Contact: React.FC = () => {
                       type="text"
                       id="name"
                       name="name"
-                      className={`w-full px-4 py-3 bg-[#2D2D2D] border ${errors.name && touched.name ? 'border-red-500' : 'border-gray-700'} rounded-md focus:outline-none focus:ring-2 focus:ring-[#A4E834] text-white`}
+                      className={`w-full px-4 py-3 bg-[#2D2D2D] border ${errors.name && touched.name ? 'border-red-500' : 'border-gray-700'} rounded-md focus:outline-none focus:ring-2 focus:ring-[#f36f20] text-white`}
                       placeholder="Tu nombre"
                     />
                     <ErrorMessage name="name" component="div" className="text-red-400 text-sm mt-1" />
@@ -193,7 +193,7 @@ const Contact: React.FC = () => {
                       type="email"
                       id="email"
                       name="email"
-                      className={`w-full px-4 py-3 bg-[#2D2D2D] border ${errors.email && touched.email ? 'border-red-500' : 'border-gray-700'} rounded-md focus:outline-none focus:ring-2 focus:ring-[#A4E834] text-white`}
+                      className={`w-full px-4 py-3 bg-[#2D2D2D] border ${errors.email && touched.email ? 'border-red-500' : 'border-gray-700'} rounded-md focus:outline-none focus:ring-2 focus:ring-[#f36f20] text-white`}
                       placeholder="tu@email.com"
                     />
                     <ErrorMessage name="email" component="div" className="text-red-400 text-sm mt-1" />
@@ -207,7 +207,7 @@ const Contact: React.FC = () => {
                       type="tel"
                       id="phone"
                       name="phone"
-                      className={`w-full px-4 py-3 bg-[#2D2D2D] border ${errors.phone && touched.phone ? 'border-red-500' : 'border-gray-700'} rounded-md focus:outline-none focus:ring-2 focus:ring-[#A4E834] text-white`}
+                      className={`w-full px-4 py-3 bg-[#2D2D2D] border ${errors.phone && touched.phone ? 'border-red-500' : 'border-gray-700'} rounded-md focus:outline-none focus:ring-2 focus:ring-[#f36f20] text-white`}
                       placeholder="+52 (__) ____ ____"
                     />
                     <ErrorMessage name="phone" component="div" className="text-red-400 text-sm mt-1" />
@@ -222,7 +222,7 @@ const Contact: React.FC = () => {
                       id="message"
                       name="message"
                       rows={5}
-                      className={`w-full px-4 py-3 bg-[#2D2D2D] border ${errors.message && touched.message ? 'border-red-500' : 'border-gray-700'} rounded-md focus:outline-none focus:ring-2 focus:ring-[#A4E834] text-white`}
+                      className={`w-full px-4 py-3 bg-[#2D2D2D] border ${errors.message && touched.message ? 'border-red-500' : 'border-gray-700'} rounded-md focus:outline-none focus:ring-2 focus:ring-[#f36f20] text-white`}
                       placeholder="¿En qué podemos ayudarte?"
                     />
                     <ErrorMessage name="message" component="div" className="text-red-400 text-sm mt-1" />
@@ -232,11 +232,11 @@ const Contact: React.FC = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-[#A4E834] hover:bg-[#8fcf2a] text-[#121212] font-bold py-3 px-6 rounded-md transition-colors duration-300 flex items-center justify-center"
+                      className="w-full bg-[#f36f20] hover:bg-[#d45e1b] text-white font-bold py-3 px-6 rounded-md transition-colors duration-300 flex items-center justify-center"
                     >
                       {isSubmitting ? (
                         <>
-                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-[#121212]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>

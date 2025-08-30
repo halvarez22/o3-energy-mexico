@@ -9,12 +9,12 @@ const AboutSummary: React.FC = () => {
           <div className="text-left md:order-last">
             <h2 className="text-4xl lg:text-5xl font-bold text-o3-dark-gray mb-6">Quiénes Somos</h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              O3 Energy Mexico es un líder en el desarrollo de energía solar y soluciones de almacenamiento a gran escala. Nuestro equipo de expertos se dedica a impulsar la transición de México hacia un futuro energético más limpio y sostenible, manejando proyectos desde la concepción hasta la operación con un enfoque en la innovación, eficiencia y la satisfacción del cliente.
+              <span className="text-[#f36f20]">O3 ENERGY MÉXICO</span> es una empresa líder en el desarrollo, construcción y operación de proyectos de energía renovable a gran escala en México. Nuestro equipo de expertos se dedica a impulsar la transición de México hacia un futuro energético más limpio y sostenible, manejando proyectos desde la concepción hasta la operación con un enfoque en la innovación, eficiencia y la satisfacción del cliente.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Con una profunda experiencia en el mercado local y un historial de éxito, nos asociamos con propietarios de tierras, comunidades y inversionistas para crear valor duradero y un impacto ambiental positivo.
             </p>
-            <a href="#contact" className="text-white bg-o3-blue hover:bg-o3-green font-bold py-3 px-8 rounded-full transition-colors">
+            <a href="#contact" className="mt-8 inline-block bg-[#f36f20] hover:bg-[#d45e1b] text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
               Leer Más
             </a>
           </div>

@@ -70,7 +70,7 @@ const Locations: React.FC = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <FaMapMarkerAlt className="text-[#A4E834] mt-1 mr-3 flex-shrink-0" />
+                    <FaMapMarkerAlt className="text-[#f36f20] mt-1 mr-3 flex-shrink-0" />
                     <div>
                       <p className="text-gray-700">{location.address}</p>
                       <p className="text-gray-700">{location.city}</p>
@@ -78,15 +78,15 @@ const Locations: React.FC = () => {
                   </div>
                   
                   <div className="flex items-center">
-                    <FaPhone className="text-[#A4E834] mr-3 flex-shrink-0" />
-                    <a href={`tel:${location.phone.replace(/\D/g, '')}`} className="text-gray-700 hover:text-[#A4E834] transition-colors">
+                    <FaPhone className="text-[#f36f20] mr-3 flex-shrink-0" />
+                    <a href={`tel:${location.phone.replace(/\D/g, '')}`} className="text-gray-700 hover:text-[#f36f20] transition-colors">
                       {location.phone}
                     </a>
                   </div>
                   
                   <div className="flex items-center">
-                    <FaEnvelope className="text-[#A4E834] mr-3 flex-shrink-0" />
-                    <a href={`mailto:${location.email}`} className="text-gray-700 hover:text-[#A4E834] transition-colors">
+                    <FaEnvelope className="text-[#f36f20] mr-3 flex-shrink-0" />
+                    <a href={`mailto:${location.email}`} className="text-gray-700 hover:text-[#f36f20] transition-colors">
                       {location.email}
                     </a>
                   </div>
@@ -96,7 +96,7 @@ const Locations: React.FC = () => {
                       href={location.mapUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-[#A4E834] font-medium hover:underline"
+                      className="inline-flex items-center text-[#f36f20] font-medium hover:underline"
                     >
                       <FaGlobeAmericas className="mr-2" />
                       Ver en el mapa
@@ -115,7 +115,7 @@ const Locations: React.FC = () => {
           </p>
           <a 
             href="#contact" 
-            className="inline-block bg-[#A4E834] hover:bg-[#8fcf2a] text-gray-900 font-bold py-3 px-8 rounded-md transition-colors duration-300"
+            className="inline-block bg-[#f36f20] hover:bg-[#d45e1b] text-white font-bold py-3 px-8 rounded-md transition-colors duration-300"
           >
             Contáctanos
           </a>

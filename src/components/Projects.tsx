@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" 
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[#A4E834]">{project.name}</h3>
+                <h3 className="text-xl font-bold text-[#f36f20]">{project.name}</h3>
                 <p className="text-gray-400 mt-1">{project.location}</p>
                 <p className="mt-2 text-white font-semibold">{project.capacity}</p>
               </div>
@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
         <div className="mt-12">
           <Link 
             to="/proyectos" 
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#A4E834] hover:bg-green-600 transition-colors duration-300"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#f36f20] hover:bg-[#d45e1b] transition-colors duration-300"
           >
             Ver todos los proyectos
             <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

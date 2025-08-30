@@ -23,15 +23,15 @@ const Hero: React.FC = () => {
       <div className="relative z-10 px-6 max-w-6xl mx-auto w-full">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tight leading-tight">
           Liderando la transición <br />
-          <span className="text-[#A4E834] animate-pulse">energética en México</span>
+          <span className="text-[#f36f20] animate-pulse">energética en México</span>
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-200">
           Desarrollamos, construimos y operamos proyectos de energía renovable a gran escala.
         </p>
         <a 
           href="#about" 
-          className="mt-8 inline-block bg-[#A4E834] text-black font-bold py-3 px-8 rounded-full uppercase tracking-wider 
-                    hover:bg-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#A4E834]"
+          className="mt-8 inline-block bg-[#f36f20] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider 
+                    hover:bg-[#d45e1b] transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f36f20]"
           aria-label="Conocer más sobre nuestra empresa"
         >
           Conócenos

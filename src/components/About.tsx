@@ -7,7 +7,7 @@ const About: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Sobre <span className="text-[#A4E834]">O3 Energy</span></h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Sobre <span className="text-[#f36f20]">O3 Energy</span></h2>
             <p className="text-gray-300 mb-4 text-lg">
               Somos una empresa mexicana de energía renovable, enfocada en el desarrollo, construcción y operación de proyectos solares y eólicos a gran escala en México.
             </p>

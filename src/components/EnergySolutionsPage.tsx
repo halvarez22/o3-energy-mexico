@@ -1,46 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaSolarPanel, FaTools, FaPlug, FaCarBattery, FaBuilding, FaHandHoldingUsd, FaLeaf } from 'react-icons/fa';
+import { FaSolarPanel, FaLightbulb, FaSun, FaHandHoldingUsd, FaLeaf, FaTools, FaPlug, FaCarBattery, FaBuilding } from 'react-icons/fa';
 
 const EnergySolutionsPage: React.FC = () => {
   const solutions = [
     {
-      icon: <FaSolarPanel className="w-12 h-12 text-green-500 mb-4" />,
+      icon: <FaSolarPanel className="w-12 h-12 text-[#f36f20] mb-4" />,
       title: 'Desarrollo de Proyectos Solares',
       description: 'Ofrecemos desarrollo de proyectos llave en mano de principio a fin, adaptados a sus necesidades específicas.',
       link: '/soluciones-energeticas/desarrollo-proyectos',
       linkText: 'Más información'
     },
     {
-      icon: <FaTools className="w-12 h-12 text-green-500 mb-4" />,
+      icon: <FaLightbulb className="w-12 h-12 text-[#f36f20] mb-4" />,
       title: 'EPC Solar',
       description: 'Gestionamos su proyecto solar completo con experiencia y recursos para garantizar el éxito.',
       link: '/soluciones-energeticas/epc-solar',
       linkText: 'Descubra cómo'
     },
     {
-      icon: <FaPlug className="w-12 h-12 text-green-500 mb-4" />,
+      icon: <FaSun className="w-12 h-12 text-[#f36f20] mb-4" />,
       title: 'Instalación Solar',
       description: 'Nuestros equipos están capacitados para manejar instalaciones solares personalizadas de cualquier escala.',
       link: '/soluciones-energeticas/instalacion-solar',
       linkText: 'Ver casos de éxito'
     },
     {
-      icon: <FaHandHoldingUsd className="w-12 h-12 text-green-500 mb-4" />,
+      icon: <FaHandHoldingUsd className="w-12 h-12 text-[#f36f20] mb-4" />,
       title: 'Financiamiento',
       description: 'Ofrecemos opciones flexibles de financiamiento para que pueda comenzar a ahorrar desde el primer día.',
       link: '/soluciones-energeticas/financiamiento',
       linkText: 'Ver opciones'
     },
     {
-      icon: <FaTools className="w-12 h-12 text-green-500 mb-4" />,
+      icon: <FaLightbulb className="w-12 h-12 text-[#f36f20] mb-4" />,
       title: 'Mantenimiento',
       description: 'Servicios profesionales de mantenimiento para garantizar el rendimiento óptimo de su sistema solar.',
       link: '/soluciones-energeticas/mantenimiento',
       linkText: 'Más información'
     },
     {
-      icon: <FaLeaf className="w-12 h-12 text-green-500 mb-4" />,
+      icon: <FaLeaf className="w-12 h-12 text-[#f36f20] mb-4" />,
       title: 'Eficiencia Energética',
       description: 'Soluciones para optimizar el consumo de energía y reducir costos operativos en sus instalaciones.',
       link: '/soluciones-energeticas/eficiencia-energetica',

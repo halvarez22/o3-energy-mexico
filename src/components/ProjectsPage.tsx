@@ -37,7 +37,7 @@ const ProjectsPage: React.FC = () => {
           <div className="container mx-auto px-6 py-4">
             <Link 
               to="/" 
-              className="inline-flex items-center text-[#A4E834] hover:text-white font-medium transition-colors"
+              className="inline-flex items-center text-[#f36f20] hover:text-white font-medium transition-colors"
             >
               <FaArrowLeft className="mr-2" /> Volver al inicio
             </Link>
