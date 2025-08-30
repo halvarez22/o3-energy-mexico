@@ -25,6 +25,13 @@ const Hero: React.FC = () => {
           Liderando la transición <br />
           <span className="text-[#f36f20] animate-pulse">energética en México</span>
         </h1>
+        <div className="mt-8 flex justify-center">
+          <img 
+            src="/images/logo-o3.png" 
+            alt="O3 Energy Logo" 
+            className="h-16 md:h-20 lg:h-24 object-contain"
+          />
+        </div>
         <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-200">
           Desarrollamos, construimos y operamos proyectos de energía renovable a gran escala.
         </p>

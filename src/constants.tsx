@@ -53,6 +53,7 @@ export const TEAM_DATA: TeamMember[] = [
     { image: "/images/team/Brenda Aguirre.jpeg", name: "Brenda Aguirre", title: "Directora Chihuahua" },
     { image: "/images/team/David Santoyo.jpeg", name: "David Santoyo", title: "Representante Legal y Director de Operaciones" },
     { image: "/images/team/Alejandro Velasco.jpeg", name: "Alejandro Velasco", title: "Presidente" },
+    { image: "/images/team/Jesus Morales.jpg", name: "Jesús Morales", title: "Chief Technology Officer" },
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
