@@ -5,32 +5,32 @@ import { FaTools, FaClipboardCheck, FaTint, FaShieldAlt, FaSearchDollar, FaChart
 const SolarMaintenancePage: React.FC = () => {
   const services = [
     {
-      icon: <FaTools className="w-8 h-8 text-green-500" />,
+      icon: <FaTools className="w-8 h-8 text-[#022240]" />,
       title: 'Mantenimiento Preventivo',
       description: 'Inspecciones y ajustes regulares para garantizar el rendimiento óptimo de su sistema solar.'
     },
     {
-      icon: <FaTint className="w-8 h-8 text-green-500" />,
+      icon: <FaTint className="w-8 h-8 text-[#022240]" />,
       title: 'Limpieza de Paneles',
       description: 'Limpieza profesional para eliminar polvo, suciedad y otros residuos que afectan la eficiencia.'
     },
     {
-      icon: <FaChartLine className="w-8 h-8 text-green-500" />,
+      icon: <FaChartLine className="w-8 h-8 text-[#022240]" />,
       title: 'Monitoreo de Rendimiento',
       description: 'Análisis continuo del rendimiento de su sistema para detectar y solucionar problemas a tiempo.'
     },
     {
-      icon: <FaShieldAlt className="w-8 h-8 text-green-500" />,
+      icon: <FaShieldAlt className="w-8 h-8 text-[#022240]" />,
       title: 'Garantías',
       description: 'Gestión de garantías con los fabricantes en su nombre para cualquier reparación necesaria.'
     },
     {
-      icon: <FaClipboardCheck className="w-8 h-8 text-green-500" />,
+      icon: <FaClipboardCheck className="w-8 h-8 text-[#022240]" />,
       title: 'Inspecciones Eléctricas',
       description: 'Pruebas y verificaciones de los componentes eléctricos para garantizar la seguridad y eficiencia.'
     },
     {
-      icon: <FaSearchDollar className="w-8 h-8 text-green-500" />,
+      icon: <FaSearchDollar className="w-8 h-8 text-[#022240]" />,
       title: 'Auditorías de Eficiencia',
       description: 'Evaluación detallada para identificar oportunidades de mejora en el rendimiento de su sistema.'
     }
@@ -57,7 +57,7 @@ const SolarMaintenancePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-green-700 to-green-900 text-white pt-32 pb-20 -mt-16">
+      <div className="relative bg-gradient-to-r from-blue-900 to-[#022240] text-white pt-32 pb-20 -mt-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Mantenimiento de Sistemas Solares</h1>
@@ -94,8 +94,9 @@ const SolarMaintenancePage: React.FC = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Nuestros Servicios de Mantenimiento</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg h-full hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+              <div key={index} className="bg-blue-50 p-6 rounded-lg mb-8 hover:shadow-md transition-shadow">
+                <div className="bg-[#022240] w-2 h-2 rounded-full mr-2"></div>
+                <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
@@ -106,7 +107,7 @@ const SolarMaintenancePage: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-12 mb-20">
+        <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-12 mb-20">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Beneficios del Mantenimiento Regular</h2>
@@ -120,7 +121,7 @@ const SolarMaintenancePage: React.FC = () => {
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start">
-                      <svg className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="h-6 w-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <span className="text-lg text-gray-700">{benefit}</span>
@@ -133,7 +134,7 @@ const SolarMaintenancePage: React.FC = () => {
                 <ul className="space-y-4">
                   {maintenanceTips.map((tip, index) => (
                     <li key={index} className="flex items-start">
-                      <svg className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="h-6 w-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                       <span className="text-lg text-gray-700">{tip}</span>
@@ -149,7 +150,7 @@ const SolarMaintenancePage: React.FC = () => {
         <div className="max-w-4xl mx-auto mb-20">
           <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
             <div className="md:flex">
-              <div className="md:flex-shrink-0 bg-green-600 md:w-1/3 flex items-center justify-center p-8">
+              <div className="md:flex-shrink-0 bg-blue-600 md:w-1/3 flex items-center justify-center p-8">
                 <FaShieldAlt className="w-16 h-16 text-white" />
               </div>
               <div className="p-8">
@@ -173,7 +174,7 @@ const SolarMaintenancePage: React.FC = () => {
                 </div>
                 <Link 
                   to="/#contact" 
-                  className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-lg transition-colors"
+                  className="w-full bg-[#022240] hover:bg-blue-900 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Consultar sobre Garantías
                 </Link>
@@ -183,7 +184,7 @@ const SolarMaintenancePage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-12">
+        <div className="text-center bg-gradient-to-r from-blue-800 to-[#022240] text-white rounded-xl p-12">
           <h2 className="text-3xl font-bold mb-4">¿Listo para Optimizar su Sistema Solar?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Nuestro equipo de expertos está listo para ayudarlo a mantener su sistema funcionando al máximo rendimiento.
@@ -191,13 +192,13 @@ const SolarMaintenancePage: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
               to="/#contact" 
-              className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-white text-[#f36f20] hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Solicitar Mantenimiento
             </Link>
             <Link 
               to="/soluciones-energeticas" 
-              className="border-2 border-white text-white hover:bg-white hover:text-green-700 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="border-2 border-white text-white hover:bg-white hover:text-[#f36f20] px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Volver a Soluciones
             </Link>
