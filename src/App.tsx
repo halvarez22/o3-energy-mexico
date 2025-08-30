@@ -11,6 +11,7 @@ import Locations from './components/Locations';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ChatbotWidget from './components/Chatbot/ChatbotWidget';
+import WhatsAppButton from './components/WhatsAppButton';
 
 // Code Splitting: Carga dinámica de componentes de página
 const ProjectsPage = lazy(() => import('./components/ProjectsPage'));
@@ -95,6 +96,7 @@ const App: React.FC = () => {
       
       {/* Chatbot Widget */}
       <ChatbotWidget />
+      <WhatsAppButton />
     </div>
   );
 };
