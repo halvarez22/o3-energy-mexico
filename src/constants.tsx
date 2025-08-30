@@ -49,11 +49,10 @@ export const PROJECTS_DATA: Project[] = [
 ];
 
 export const TEAM_DATA: TeamMember[] = [
-    { image: "https://picsum.photos/seed/team5/400/400", name: "Brad Stutzman", title: "CEO" },
-    { image: "https://picsum.photos/seed/team1/400/400", name: "Brenda Aguirre", title: "Directora Chihuahua" },
-    { image: "https://picsum.photos/seed/team2/400/400", name: "David Santoyo", title: "Representante Legal y Director de Operaciones" },
-    { image: "https://picsum.photos/seed/team3/400/400", name: "Alejandro Velasco", title: "Presidente" },
-    { image: "https://picsum.photos/seed/team4/400/400", name: "Karla Frias", title: "Asistente de Dirección" },
+    { image: "/images/team/Brad Stutzman.jpeg", name: "Brad Stutzman", title: "CEO" },
+    { image: "/images/team/Brenda Aguirre.jpeg", name: "Brenda Aguirre", title: "Directora Chihuahua" },
+    { image: "/images/team/David Santoyo.jpeg", name: "David Santoyo", title: "Representante Legal y Director de Operaciones" },
+    { image: "/images/team/Alejandro Velasco.jpeg", name: "Alejandro Velasco", title: "Presidente" },
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
