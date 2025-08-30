@@ -45,7 +45,7 @@ const ProjectsPage: React.FC = () => {
         </div>
       )}
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-green-700 to-green-900 text-white pt-32 pb-20 -mt-16">
+      <div className="relative bg-gradient-to-r from-blue-900 to-[#022240] text-white pt-32 pb-20 -mt-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Proyectos Solares</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -64,7 +64,7 @@ const ProjectsPage: React.FC = () => {
             <input
               type="text"
               placeholder="Buscar proyectos..."
-              className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#022240] focus:border-transparent"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -75,7 +75,7 @@ const ProjectsPage: React.FC = () => {
               <FaFilter className="text-gray-400" />
             </div>
             <select
-              className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent appearance-none"
+              className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#022240] focus:border-transparent appearance-none"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
@@ -104,7 +104,7 @@ const ProjectsPage: React.FC = () => {
                     }}
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <span className="inline-block bg-green-500 text-white text-xs px-2 py-1 rounded-full mb-2">
+                    <span className="inline-block bg-[#022240] text-white text-xs px-2 py-1 rounded-full mb-2">
                       {project.category}
                     </span>
                     <h3 className="text-xl font-bold text-white">{project.title}</h3>
@@ -118,10 +118,10 @@ const ProjectsPage: React.FC = () => {
                     </div>
                     <div className="text-right">
                       <p className="text-gray-600 text-sm">Capacidad</p>
-                      <p className="font-bold text-green-600">{project.capacity}</p>
+                      <p className="font-bold text-[#022240]">{project.capacity}</p>
                     </div>
                   </div>
-                  <button className="mt-4 w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                  <button className="mt-4 w-full flex items-center justify-center gap-2 bg-[#022240] hover:bg-blue-900 text-white font-medium py-2 px-4 rounded-lg transition-colors">
                     Ver detalles <FaArrowRight />
                   </button>
                 </div>
@@ -136,7 +136,7 @@ const ProjectsPage: React.FC = () => {
                 setSearchTerm('');
                 setSelectedCategory('Todos');
               }}
-              className="mt-4 text-green-600 hover:underline"
+              className="mt-4 text-[#022240] hover:underline"
             >
               Mostrar todos los proyectos
             </button>
@@ -153,7 +153,7 @@ const ProjectsPage: React.FC = () => {
           </p>
           <a 
             href="#contact" 
-            className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
+            className="inline-block bg-[#022240] hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-lg transition-colors"
           >
             Contáctanos
           </a>

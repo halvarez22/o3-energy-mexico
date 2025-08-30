@@ -51,7 +51,7 @@ const EnergySolutionsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-green-700 to-green-900 text-white pt-32 pb-20 -mt-16">
+      <div className="relative bg-gradient-to-r from-blue-900 to-[#022240] text-white pt-32 pb-20 -mt-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Soluciones Energéticas</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -70,7 +70,7 @@ const EnergySolutionsPage: React.FC = () => {
             Por eso ofrecemos un amplio rango de soluciones de energía solar diseñadas para ayudar a negocios de 
             todos los tamaños a reducir su huella de carbono, disminuir costos energéticos y alcanzar sus metas de sostenibilidad.
           </p>
-          <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+          <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-[#022240]">
             <p className="text-gray-700">
               <span className="font-semibold">¿Sabía que la energía solar puede hacer más que solo reducir sus costos de electricidad?</span> 
               Con energía limpia y alternativa, su negocio ya no dependerá exclusivamente de la red eléctrica, 
@@ -91,7 +91,7 @@ const EnergySolutionsPage: React.FC = () => {
                 <p className="text-gray-600 mb-6">{solution.description}</p>
                 <Link 
                   to={solution.link}
-                  className="inline-flex items-center text-green-600 hover:text-green-800 font-medium transition-colors"
+                  className="inline-flex items-center text-[#022240] hover:text-blue-800 font-medium transition-colors"
                 >
                   {solution.linkText}
                   <svg className="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -109,8 +109,8 @@ const EnergySolutionsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Beneficios Adicionales</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="flex items-start">
-                <div className="bg-green-100 p-3 rounded-full mr-4">
-                  <FaBuilding className="w-6 h-6 text-green-600" />
+                <div className="bg-blue-100 p-3 rounded-full mr-4">
+                  <FaBuilding className="w-6 h-6 text-[#022240]" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Para Empresas</h3>
@@ -121,8 +121,8 @@ const EnergySolutionsPage: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="bg-green-100 p-3 rounded-full mr-4">
-                  <FaCarBattery className="w-6 h-6 text-green-600" />
+                <div className="bg-blue-100 p-3 rounded-full mr-4">
+                  <FaCarBattery className="w-6 h-6 text-[#022240]" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Almacenamiento de Energía</h3>
@@ -137,7 +137,7 @@ const EnergySolutionsPage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-12">
+        <div className="text-center bg-gradient-to-r from-blue-800 to-[#022240] text-white rounded-xl p-12">
           <h2 className="text-3xl font-bold mb-4">¿Listo para comenzar su viaje hacia la energía limpia?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Nuestro equipo de expertos está listo para ayudarle a encontrar la solución solar perfecta para sus necesidades.
@@ -145,13 +145,13 @@ const EnergySolutionsPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
               to="/contacto" 
-              className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-white text-[#022240] hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contáctenos
             </Link>
             <Link 
               to="/proyectos" 
-              className="border-2 border-white text-white hover:bg-white hover:text-green-700 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="border-2 border-white text-white hover:bg-white hover:text-[#022240] px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Ver Proyectos
             </Link>

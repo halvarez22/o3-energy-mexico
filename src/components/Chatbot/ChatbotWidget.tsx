@@ -159,11 +159,11 @@ const ChatbotWidget: React.FC = () => {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
-            className="fixed bottom-6 right-6 z-50"
+            className="fixed bottom-8 right-8 z-50"
           >
             <motion.button
               onClick={() => setIsOpen(true)}
-              className="bg-[#A4E834] hover:bg-[#8fcf2a] text-[#121212] p-4 rounded-full shadow-lg transition-all duration-300 group"
+              className="flex items-center justify-center w-14 h-14 bg-[#f36f20] hover:bg-[#e05e10] text-white rounded-full shadow-lg transition-all duration-300 group"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               animate={{ 
@@ -193,35 +193,43 @@ const ChatbotWidget: React.FC = () => {
             initial={{ opacity: 0, y: 100, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.8 }}
-            className={`fixed bottom-6 right-6 z-50 bg-white rounded-lg shadow-2xl border border-gray-200 ${
-              isMinimized ? 'w-80 h-16' : 'w-96 h-[500px]'
+            className={`fixed bottom-6 right-6 z-50 bg-white rounded-lg shadow-2xl border border-[#f36f20]/20 ${
+              isMinimized 
+                ? 'w-20 h-16 sm:w-80' 
+                : 'w-[calc(100%-3rem)] sm:w-96 h-[calc(100vh-8rem)] max-h-[600px]'
             } transition-all duration-300`}
           >
             {/* Header */}
-            <div className="bg-[#A4E834] text-[#121212] p-4 rounded-t-lg flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-[#121212] rounded-full flex items-center justify-center">
-                  <MessageCircle size={16} className="text-[#A4E834]" />
+            <div className="bg-[#f36f20] text-white p-2 sm:p-4 rounded-t-lg flex items-center justify-between">
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                  <MessageCircle size={14} className="text-[#f36f20] w-3 h-3 sm:w-4 sm:h-4" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-sm">Asistente O3 ENERGY MEXICO</h3>
-                  <p className="text-xs opacity-80">En línea</p>
+                {!isMinimized && (
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-xs sm:text-sm truncate">Asistente O3 ENERGY MEXICO</h3>
+                    <p className="text-[10px] sm:text-xs opacity-80">En línea</p>
+                  </div>
+                )}
+              </div>
+              {!isMinimized && (
+                <div className="flex items-center space-x-1 sm:space-x-2">
+                  <button
+                    onClick={handleMinimize}
+                    className="hover:bg-[#e05e10] p-1 rounded transition-colors text-white"
+                    aria-label="Minimizar chat"
+                  >
+                    <Minimize2 size={14} className="w-3 h-3 sm:w-4 sm:h-4" />
+                  </button>
+                  <button
+                    onClick={handleClose}
+                    className="hover:bg-[#e05e10] p-1 rounded transition-colors text-white"
+                    aria-label="Cerrar chat"
+                  >
+                    <X size={14} className="w-3 h-3 sm:w-4 sm:h-4" />
+                  </button>
                 </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={handleMinimize}
-                  className="hover:bg-[#8fcf2a] p-1 rounded transition-colors"
-                >
-                  <Minimize2 size={16} />
-                </button>
-                <button
-                  onClick={handleClose}
-                  className="hover:bg-[#8fcf2a] p-1 rounded transition-colors"
-                >
-                  <X size={16} />
-                </button>
-              </div>
+              )}
             </div>
 
             {/* Chat Content */}

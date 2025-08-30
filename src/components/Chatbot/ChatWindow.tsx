@@ -48,9 +48,9 @@ const ChatWindow: React.FC<ChatWindowProps> = ({
   };
 
   return (
-    <div className="flex flex-col h-[436px]">
+    <div className="flex flex-col h-full max-h-[calc(100vh-12rem)] sm:max-h-[436px]">
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+      <div className="flex-1 overflow-y-auto p-2 sm:p-4 space-y-3 sm:space-y-4 bg-gray-50">
         <AnimatePresence>
           {messages.map((message) => (
             <MessageBubble
@@ -66,37 +66,41 @@ const ChatWindow: React.FC<ChatWindowProps> = ({
       </div>
 
       {/* Input Area */}
-      <div className="border-t border-gray-200 p-4 bg-white rounded-b-lg">
-        <form onSubmit={handleSubmit} className="flex items-center space-x-2">
+      <div className="border-t border-gray-200 p-2 sm:p-3 bg-white rounded-b-lg">
+        <form onSubmit={handleSubmit} className="flex items-center space-x-1 sm:space-x-2">
           <input
             ref={inputRef}
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Escribe tu mensaje..."
-            className="flex-1 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A4E834] focus:border-transparent text-sm"
+            className="flex-1 border border-gray-300 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 focus:outline-none focus:ring-2 focus:ring-[#f36f20] focus:border-transparent text-xs sm:text-sm"
             disabled={isTyping}
           />
           <button
             type="submit"
             disabled={!inputValue.trim() || isTyping}
-            className="bg-[#A4E834] hover:bg-[#8fcf2a] disabled:bg-gray-300 text-[#121212] p-2 rounded-full transition-colors duration-200"
+            className="bg-[#f36f20] hover:bg-[#e05e10] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 flex-shrink-0"
+            aria-label="Enviar mensaje"
           >
-            <Send size={16} />
+            <Send size={14} className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </button>
         </form>
         
         {/* User Info Display */}
         {userInfo.hasProvidedInfo && (
-          <div className="mt-2 text-xs text-gray-500 flex items-center space-x-4">
+          <div className="mt-1 sm:mt-2 text-[10px] sm:text-xs text-gray-500 flex flex-wrap items-center gap-x-2 gap-y-1">
             {userInfo.name && (
               <span className="flex items-center space-x-1">
-                <User size={12} />
-                <span>{userInfo.name}</span>
+                <User size={10} className="flex-shrink-0" />
+                <span className="truncate max-w-[100px] sm:max-w-none">{userInfo.name}</span>
               </span>
             )}
             {userInfo.email && (
-              <span>📧 {userInfo.email}</span>
+              <span className="inline-flex items-center truncate max-w-[120px] sm:max-w-none">
+                <span className="mr-0.5">📧</span>
+                <span className="truncate">{userInfo.email}</span>
+              </span>
             )}
             {userInfo.phone && (
               <span>📱 {userInfo.phone}</span>

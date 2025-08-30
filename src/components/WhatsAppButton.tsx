@@ -13,13 +13,13 @@ const WhatsAppButton: React.FC = () => {
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: -20, opacity: 0 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      className="whatsapp-button-container fixed bottom-8 left-8 z-50"
+      className="fixed bottom-8 left-8 z-50"
     >
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-16 h-16 rounded-full bg-[#f36f20] text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         aria-label="Chatea con nosotros por WhatsApp"
       >
         <svg
