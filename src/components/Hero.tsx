@@ -35,14 +35,24 @@ const Hero: React.FC = () => {
         <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-200">
           Desarrollamos, construimos y operamos proyectos de energía renovable a gran escala.
         </p>
-        <a 
-          href="#about" 
-          className="mt-8 inline-block bg-[#f36f20] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider 
-                    hover:bg-[#d45e1b] transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f36f20]"
-          aria-label="Conocer más sobre nuestra empresa"
-        >
-          Conócenos
-        </a>
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="#about" 
+            className="inline-block bg-[#f36f20] text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider 
+                      hover:bg-[#d45e1b] transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#f36f20]"
+            aria-label="Conocer más sobre nuestra empresa"
+          >
+            Conócenos
+          </a>
+          <a 
+            href="/cotizador" 
+            className="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider 
+                      hover:bg-white hover:text-[#f36f20] transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+            aria-label="Calcular cotización solar"
+          >
+            Cotizar Ahora
+          </a>
+        </div>
       </div>
     </section>
   );

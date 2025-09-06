@@ -22,6 +22,7 @@ const SolarInstallationPage = lazy(() => import('./components/SolarInstallationP
 const SolarFinancingPage = lazy(() => import('./components/SolarFinancingPage'));
 const SolarMaintenancePage = lazy(() => import('./components/SolarMaintenancePage'));
 const EnergyEfficiencyPage = lazy(() => import('./components/EnergyEfficiencyPage'));
+const CalculatorPage = lazy(() => import('./components/CalculatorPage'));
 
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
@@ -82,6 +83,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/proyectos" element={<ProjectsPage />} />
+            <Route path="/cotizador" element={<CalculatorPage />} />
             <Route path="/soluciones-energeticas" element={<EnergySolutionsPage />} />
             <Route path="/soluciones-energeticas/epc-solar" element={<EPCSolarPage />} />
             <Route path="/soluciones-energeticas/desarrollo-proyectos" element={<SolarProjectDevelopmentPage />} />
