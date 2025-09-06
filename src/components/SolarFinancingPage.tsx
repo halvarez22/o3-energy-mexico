@@ -6,7 +6,7 @@ const SolarFinancingPage: React.FC = () => {
   const financingOptions = [
     {
       title: 'Acuerdo de Compra de Energía (PPA)',
-      icon: <FaFileContract className="w-8 h-8 text-green-500 mx-auto mb-4" />,
+      icon: <FaFileContract className="w-8 h-8 text-blue-500 mx-auto mb-4" />,
       description: 'Pague solo por la energía que produce su sistema solar, sin costos iniciales y con tarifas predecibles.',
       features: [
         'Sin costo inicial',
@@ -18,7 +18,7 @@ const SolarFinancingPage: React.FC = () => {
     },
     {
       title: 'Arrendamiento Operativo',
-      icon: <FaHandHoldingUsd className="w-8 h-8 text-green-500 mx-auto mb-4" />,
+      icon: <FaHandHoldingUsd className="w-8 h-8 text-blue-500 mx-auto mb-4" />,
       description: 'Obtenga un sistema solar con pagos mensuales fijos y la opción de comprar al final del plazo.',
       features: [
         'Pagos fijos predecibles',
@@ -42,7 +42,7 @@ const SolarFinancingPage: React.FC = () => {
     },
     {
       title: 'Préstamos Solares',
-      icon: <FaMoneyBillWave className="w-8 h-8 text-green-500 mx-auto mb-4" />,
+      icon: <FaMoneyBillWave className="w-8 h-8 text-blue-500 mx-auto mb-4" />,
       description: 'Financiamiento tradicional para ser propietario de su sistema solar desde el primer día.',
       features: [
         'Sea dueño de su sistema inmediatamente',
@@ -80,7 +80,7 @@ const SolarFinancingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-green-700 to-green-900 text-white pt-32 pb-20 -mt-16">
+      <div className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white pt-32 pb-20 -mt-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Financiamiento Solar</h1>
@@ -127,7 +127,7 @@ const SolarFinancingPage: React.FC = () => {
                   <ul className="space-y-3 mb-8">
                     {option.features.map((feature, i) => (
                       <li key={i} className="flex items-start">
-                        <FaCheckCircle className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                        <FaCheckCircle className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -136,7 +136,7 @@ const SolarFinancingPage: React.FC = () => {
                 <div className="bg-gray-50 px-8 py-4 border-t border-gray-100 text-center">
                   <Link 
                     to="/#contact" 
-                    className="text-green-600 hover:text-green-800 font-semibold inline-flex items-center"
+                    className="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center"
                   >
                     Más información
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +150,7 @@ const SolarFinancingPage: React.FC = () => {
         </div>
 
         {/* Incentives Section */}
-        <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-12 mb-20">
+        <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-12 mb-20">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Incentivos Fiscales y Beneficios</h2>
@@ -161,7 +161,7 @@ const SolarFinancingPage: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {incentives.map((incentive, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
-                  <div className="text-4xl font-bold text-green-600 mb-3">{incentive.amount}</div>
+                  <div className="w-3 h-3 rounded-full bg-blue-500 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{incentive.title}</h3>
                   <p className="text-gray-600">{incentive.description}</p>
                 </div>
@@ -176,17 +176,17 @@ const SolarFinancingPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <FaShieldAlt className="w-8 h-8 text-green-500 mx-auto mb-4" />,
+                icon: <FaShieldAlt className="w-8 h-8 text-blue-500 mx-auto mb-4" />,
                 title: 'Protección contra el Aumento de Tarifas',
                 description: 'Proteja su negocio de los constantes aumentos en las tarifas eléctricas con costos de energía predecibles.'
               },
               {
-                icon: <FaChartLine className="w-8 h-8 text-green-500 mx-auto mb-4" />,
+                icon: <FaChartLine className="w-8 h-8 text-blue-500 mx-auto mb-4" />,
                 title: 'Mejor Flujo de Efectivo',
                 description: 'Conserve su capital de trabajo mientras disfruta de los beneficios de la energía solar.'
               },
               {
-                icon: <FaClock className="w-8 h-8 text-green-500 mx-auto mb-4" />,
+                icon: <FaClock className="w-8 h-8 text-blue-500 mx-auto mb-4" />,
                 title: 'Tiempo de Recuperación Rápido',
                 description: 'Los ahorros en su factura eléctrica a menudo cubren los pagos del financiamiento desde el primer día.'
               }
@@ -203,7 +203,7 @@ const SolarFinancingPage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-12">
+        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-12">
           <h2 className="text-3xl font-bold mb-4">¿Listo para Descubrir sus Opciones de Financiamiento?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Nuestros expertos en financiamiento están listos para ayudarlo a encontrar la mejor solución para su proyecto solar.
@@ -211,7 +211,7 @@ const SolarFinancingPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
               to="/#contact" 
-              className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-[#f36f20] hover:bg-[#d45e1b] text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contáctenos
             </Link>

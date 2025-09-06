@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-12 border-t border-gray-800 pt-8 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} O3 ENERGY MEXICO. Todos los derechos reservados.</p>
+          <p>Powered by pai-b &copy; {new Date().getFullYear()}. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

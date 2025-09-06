@@ -145,7 +145,7 @@ const EnergySolutionsPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
               to="/contacto" 
-              className="bg-white text-[#022240] hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-[#f36f20] hover:bg-[#d45e1b] text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contáctenos
             </Link>

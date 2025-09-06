@@ -42,10 +42,10 @@ export const SERVICES_DATA: Service[] = [
 ];
 
 export const PROJECTS_DATA: Project[] = [
-    { image: "https://picsum.photos/seed/project1/600/400", name: "Parque Solar La Esperanza", location: "Sonora, México", capacity: "150 MW" },
-    { image: "https://picsum.photos/seed/project2/600/400", name: "Planta Eólica El Viento", location: "Oaxaca, México", capacity: "120 MW" },
-    { image: "https://picsum.photos/seed/project3/600/400", name: "Parque Solar del Norte", location: "Chihuahua, México", capacity: "200 MW" },
-    { image: "https://picsum.photos/seed/project4/600/400", name: "Planta Solar Maya", location: "Yucatán, México", capacity: "90 MW" },
+    { image: "/images/volkswagen-solar-project.jpg", name: "Volkswagen Solar Project", location: "Richmond, CA", capacity: "116 KW" },
+    { image: "/images/holiday-inn-solar.jpg", name: "Holiday Inn Solar Installation", location: "Dripping Springs, TX", capacity: "80.7 KW" },
+    { image: "/images/chase-bank-solar.jpg", name: "Chase Bank Solar Project", location: "Denton, TX", capacity: "50 KW" },
+    { image: "/images/murrieta-solar-farm.jpg", name: "City of Murrieta Solar Farm", location: "Murrieta, CA", capacity: "503 KW" },
 ];
 
 export const TEAM_DATA: TeamMember[] = [

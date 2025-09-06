@@ -5,32 +5,32 @@ import { FaSolarPanel, FaChartLine, FaMapMarkedAlt, FaClipboardCheck, FaTools, F
 const SolarProjectDevelopmentPage: React.FC = () => {
   const processSteps = [
     {
-      icon: <FaMapMarkedAlt className="w-8 h-8 text-green-500" />,
+      icon: <FaMapMarkedAlt className="w-8 h-8 text-blue-500" />,
       title: 'Selección del Sitio',
       description: 'Identificamos la ubicación ideal para su proyecto solar, considerando factores como la exposición solar, el espacio disponible y la infraestructura cercana.'
     },
     {
-      icon: <FaSearchDollar className="w-8 h-8 text-green-500" />,
+      icon: <FaSearchDollar className="w-8 h-8 text-blue-500" />,
       title: 'Estudio de Factibilidad',
       description: 'Realizamos un análisis detallado para evaluar la viabilidad técnica y económica de su proyecto solar.'
     },
     {
-      icon: <FaSolarPanel className="w-8 h-8 text-green-500" />,
+      icon: <FaSolarPanel className="w-8 h-8 text-blue-500" />,
       title: 'Diseño del Sistema',
       description: 'Nuestros ingenieros diseñan un sistema personalizado que maximiza la producción de energía y el retorno de inversión.'
     },
     {
-      icon: <FaClipboardCheck className="w-8 h-8 text-green-500" />,
+      icon: <FaClipboardCheck className="w-8 h-8 text-blue-500" />,
       title: 'Permisos y Aprobaciones',
       description: 'Nos encargamos de toda la documentación y trámites necesarios para obtener las aprobaciones requeridas.'
     },
     {
-      icon: <FaTools className="w-8 h-8 text-green-500" />,
+      icon: <FaTools className="w-8 h-8 text-blue-500" />,
       title: 'Construcción',
       description: 'Nuestro equipo calificado ejecuta la instalación con los más altos estándares de calidad y seguridad.'
     },
     {
-      icon: <FaChartLine className="w-8 h-8 text-green-500" />,
+      icon: <FaChartLine className="w-8 h-8 text-blue-500" />,
       title: 'Monitoreo y Mantenimiento',
       description: 'Ofrecemos servicios continuos para garantizar el rendimiento óptimo de su sistema solar a lo largo del tiempo.'
     }
@@ -48,7 +48,7 @@ const SolarProjectDevelopmentPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-green-700 to-green-900 text-white pt-32 pb-20 -mt-16">
+      <div className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white pt-32 pb-20 -mt-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Desarrollo de Proyectos Solares</h1>
@@ -86,7 +86,7 @@ const SolarProjectDevelopmentPage: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg h-full">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                   {step.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
@@ -114,7 +114,7 @@ const SolarProjectDevelopmentPage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-12">
+        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-12">
           <h2 className="text-3xl font-bold mb-4">¿Listo para comenzar su proyecto solar?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Nuestro equipo de expertos está listo para guiarlo a través de cada paso del desarrollo de su proyecto solar.
@@ -122,7 +122,7 @@ const SolarProjectDevelopmentPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
               to="/contacto" 
-              className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-[#f36f20] hover:bg-[#d45e1b] text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contáctenos
             </Link>

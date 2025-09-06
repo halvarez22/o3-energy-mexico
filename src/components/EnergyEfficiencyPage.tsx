@@ -81,7 +81,7 @@ const EnergyEfficiencyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-green-700 to-green-900 text-white pt-32 pb-20 -mt-16">
+      <div className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white pt-32 pb-20 -mt-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Eficiencia Energética</h1>
@@ -90,7 +90,7 @@ const EnergyEfficiencyPage: React.FC = () => {
             </p>
             <Link 
               to="/contacto" 
-              className="inline-block bg-[#A4E834] hover:bg-green-600 text-green-900 hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300"
+              className="inline-block bg-[#3B82F6] hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300"
             >
               Solicitar Auditoría
             </Link>
@@ -148,7 +148,7 @@ const EnergyEfficiencyPage: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-12 mb-20">
+        <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-12 mb-20">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Beneficios de la Eficiencia Energética</h2>
@@ -233,7 +233,7 @@ const EnergyEfficiencyPage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-12">
+        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-12">
           <h2 className="text-3xl font-bold mb-4">¿Listo para Reducir su Consumo Energético?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Nuestros expertos están listos para ayudarle a identificar oportunidades de ahorro y eficiencia en sus instalaciones.

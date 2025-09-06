@@ -18,7 +18,7 @@ const CTA: React.FC = () => {
         <div className="mt-10">
           <a
             href="#contact"
-            className="bg-o3-blue hover:bg-o3-green text-white font-bold py-4 px-10 rounded-full text-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+            className="bg-[#f36f20] hover:bg-[#d45e1b] text-white font-bold py-4 px-10 rounded-full text-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
           >
             Solicitar Cotización
           </a>

@@ -5,17 +5,17 @@ import { FaClipboardCheck, FaLightbulb, FaHardHat } from 'react-icons/fa';
 const EPCSolarPage: React.FC = () => {
   const features = [
     {
-      icon: <FaLightbulb className="w-8 h-8 text-green-500" />,
+      icon: <FaLightbulb className="w-8 h-8 text-blue-500" />,
       title: 'Ingeniería Solar Inteligente',
       description: 'Nuestro equipo de ingenieros altamente capacitados diseña sistemas de energía renovable personalizados. Proporcionamos ilustraciones dinámicas del concepto inicial, diseño y plan de construcción detallado de su sistema de energía solar.'
     },
     {
-      icon: <FaClipboardCheck className="w-8 h-8 text-green-500" />,
+      icon: <FaClipboardCheck className="w-8 h-8 text-blue-500" />,
       title: 'Adquisición Integral de Energía Solar',
       description: 'Gracias a nuestras relaciones con los principales fabricantes, podemos ofrecer precios preferenciales. Nuestro equipo dedicado se encarga de todo el proceso de compra y logística para su proyecto.'
     },
     {
-      icon: <FaHardHat className="w-8 h-8 text-green-500" />,
+      icon: <FaHardHat className="w-8 h-8 text-blue-500" />,
       title: 'Construcción EPC de Primera Clase',
       description: 'Contamos con gerentes de proyecto certificados, contratantes y líderes de equipo con experiencia en todas las áreas de la fase de construcción, asegurando los más altos estándares de calidad y seguridad.'
     }
@@ -33,7 +33,7 @@ const EPCSolarPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-green-700 to-green-900 text-white pt-32 pb-20 -mt-16">
+      <div className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white pt-32 pb-20 -mt-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Servicios EPC Solar</h1>
@@ -42,7 +42,7 @@ const EPCSolarPage: React.FC = () => {
             </p>
             <Link 
               to="/contacto" 
-              className="inline-block bg-[#A4E834] hover:bg-green-600 text-green-900 hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300"
+              className="inline-block bg-[#f36f20] hover:bg-[#d45e1b] text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300"
             >
               Contáctenos para una cotización
             </Link>
@@ -69,7 +69,7 @@ const EPCSolarPage: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {features.map((feature, index) => (
             <div key={index} className="bg-gray-50 p-8 rounded-lg">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -85,7 +85,7 @@ const EPCSolarPage: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
-                  <svg className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-6 w-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-lg text-gray-700">{benefit}</span>
@@ -96,15 +96,15 @@ const EPCSolarPage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">¿Listo para comenzar su proyecto solar?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-12">
+          <h2 className="text-3xl font-bold mb-4">¿Listo para comenzar su proyecto solar?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
             Nuestro equipo de expertos está listo para guiarlo a través de cada paso del proceso EPC, asegurando que su proyecto de energía solar sea un éxito.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
               to="/contacto" 
-              className="bg-[#A4E834] hover:bg-green-600 text-green-900 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-[#f36f20] hover:bg-[#d45e1b] text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Solicitar Cotización
             </Link>

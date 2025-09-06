@@ -6,22 +6,22 @@ import { FaChartLine } from 'react-icons/fa6';
 const SolarInstallationPage: React.FC = () => {
   const features = [
     {
-      icon: <FaLightbulb className="w-8 h-8 text-green-500" />,
+      icon: <FaLightbulb className="w-8 h-8 text-blue-500" />,
       title: 'Soluciones Creativas',
       description: 'Ofrecemos soluciones personalizadas que se adaptan a sus necesidades específicas, incluso si su propiedad no es ideal para paneles solares tradicionales.'
     },
     {
-      icon: <FaClipboardCheck className="w-8 h-8 text-green-500" />,
+      icon: <FaClipboardCheck className="w-8 h-8 text-blue-500" />,
       title: 'Auditoría Energética',
       description: 'Realizamos una evaluación detallada de su consumo energético para recomendar la solución solar más eficiente para su negocio.'
     },
     {
-      icon: <FaTools className="w-8 h-8 text-green-500" />,
+      icon: <FaTools className="w-8 h-8 text-blue-500" />,
       title: 'Instalación Profesional',
       description: 'Nuestro equipo certificado se encarga de toda la instalación con los más altos estándares de calidad y seguridad.'
     },
     {
-      icon: <FaShieldAlt className="w-8 h-8 text-green-500" />,
+      icon: <FaShieldAlt className="w-8 h-8 text-blue-500" />,
       title: 'Garantía y Soporte',
       description: 'Ofrecemos garantía en nuestra mano de obra y soporte continuo para asegurar el rendimiento óptimo de su sistema.'
     }
@@ -41,7 +41,7 @@ const SolarInstallationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-green-700 to-green-900 text-white pt-32 pb-20 -mt-16">
+      <div className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white pt-32 pb-20 -mt-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Instalación de Paneles Solares</h1>
@@ -77,7 +77,7 @@ const SolarInstallationPage: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {features.map((feature, index) => (
             <div key={index} className="bg-gray-50 p-6 rounded-lg h-full">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
@@ -91,7 +91,7 @@ const SolarInstallationPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Nuestro Proceso de Instalación</h2>
           <div className="relative">
             {/* Timeline */}
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-green-100"></div>
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-100"></div>
             
             {/* Timeline Items */}
             <div className="relative z-10 space-y-12">
@@ -194,7 +194,7 @@ const SolarInstallationPage: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-green-600 to-green-800 text-white rounded-xl p-12">
+        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-12">
           <h2 className="text-3xl font-bold mb-4">¿Listo para comenzar su proyecto solar?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Nuestro equipo de expertos está listo para guiarlo a través de cada paso del proceso de instalación solar.
@@ -202,7 +202,7 @@ const SolarInstallationPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
               to="/#contact" 
-              className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-[#f36f20] hover:bg-[#d45e1b] text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Contáctenos
             </Link>
