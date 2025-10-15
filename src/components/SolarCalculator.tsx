@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaCalculator, FaHome, FaBuilding, FaBolt, FaFileInvoice, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 interface CalculatorData {
   installationType: string;
@@ -34,6 +35,8 @@ const SolarCalculator: React.FC = () => {
     monthlySavings: number;
     paybackPeriod: number;
   } | null>(null);
+  const [isSending, setIsSending] = useState(false);
+  const [sendStatus, setSendStatus] = useState<{ success: boolean; message: string } | null>(null);
 
   const handleInputChange = (field: keyof CalculatorData, value: string | File) => {
     setFormData(prev => ({
@@ -108,10 +111,59 @@ const SolarCalculator: React.FC = () => {
     }
   };
 
-  const handleSubmit = () => {
-    // Aquí se enviaría la cotización por email o WhatsApp
-    console.log('Cotización enviada:', { formData, calculatedQuote });
-    alert('¡Cotización enviada! Te contactaremos en 24 horas.');
+  const handleSubmit = async () => {
+    setSendStatus(null);
+    if (!calculatedQuote) {
+      setSendStatus({ success: false, message: 'Primero calcula tu cotización.' });
+      return;
+    }
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+    const templateIdDefault = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
+    const templateIdQuote = (import.meta.env.VITE_EMAILJS_QUOTE_TEMPLATE_ID as string | undefined) || templateIdDefault;
+    const contactEmail = (import.meta.env.VITE_EMAILJS_TO_EMAIL as string | undefined) || 'contacto@o3mexico.com';
+
+    if (!serviceId || !publicKey || !templateIdDefault) {
+      setSendStatus({ success: false, message: 'Configuración de EmailJS incompleta. Verifica variables VITE_EMAILJS_*.' });
+      return;
+    }
+
+    const summary = `Sistema: ${calculatedQuote.systemSize} kW\nPaneles: ${calculatedQuote.panels}\nInversión estimada: $${calculatedQuote.estimatedCost.toLocaleString()}\nAhorro mensual: $${calculatedQuote.monthlySavings.toLocaleString()}\nRecuperación: ${calculatedQuote.paybackPeriod} años`;
+
+    const userParams = {
+      from_name: formData.name || 'Prospecto',
+      from_email: formData.email,
+      phone: formData.phone || 'No proporcionado',
+      message: `¡Gracias por tu interés! Aquí está tu resumen de cotización:\n\n${summary}`,
+      subject: `Tu cotización solar - O3 Energy` ,
+      to_email: formData.email,
+    } as Record<string, any>;
+
+    const contactParams = {
+      from_name: formData.name || 'Prospecto',
+      from_email: formData.email,
+      phone: formData.phone || 'No proporcionado',
+      message: `Nueva solicitud de cotización. Datos del cliente:\n\nNombre: ${formData.name}\nEmail: ${formData.email}\nTeléfono: ${formData.phone}\nDirección: ${formData.address}\n\nResumen de cotización:\n${summary}`,
+      subject: `Nueva solicitud de cotización - ${formData.name}`,
+      to_email: contactEmail,
+    } as Record<string, any>;
+
+    setIsSending(true);
+    try {
+      // Enviar cotización al usuario (usa template de cotización si existe, si no, el default con to_email)
+      const sendToUser = emailjs.send(serviceId, templateIdQuote, userParams, publicKey);
+      // Enviar notificación al correo de contacto
+      const sendToContact = emailjs.send(serviceId, templateIdDefault, contactParams, publicKey);
+      await Promise.all([sendToUser, sendToContact]);
+
+      setSendStatus({ success: true, message: '¡Cotización enviada! Revisa tu bandeja de entrada.' });
+    } catch (err) {
+      console.error('Error enviando cotización:', err);
+      setSendStatus({ success: false, message: 'No se pudo enviar la cotización. Intenta más tarde.' });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const renderStep1 = () => (
@@ -352,13 +404,20 @@ const SolarCalculator: React.FC = () => {
         </div>
       )}
       
+      {sendStatus && (
+        <div className={`p-3 rounded-md ${sendStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+          {sendStatus.message}
+        </div>
+      )}
+
       <div className="flex flex-col sm:flex-row gap-4">
         <button
           onClick={handleSubmit}
-          className="flex-1 bg-[#f36f20] hover:bg-[#d45e1b] text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
+          disabled={isSending}
+          className="flex-1 bg-[#f36f20] hover:bg-[#d45e1b] disabled:opacity-60 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
         >
           <FaEnvelope className="mr-2" />
-          Enviar cotización por email
+          {isSending ? 'Enviando…' : 'Enviar cotización por email'}
         </button>
         
         <button

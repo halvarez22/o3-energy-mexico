@@ -22,15 +22,26 @@ const Contact: React.FC = () => {
     
     try {
       // Configuración de EmailJS desde variables de entorno
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+      const toEmail = (import.meta.env.VITE_EMAILJS_TO_EMAIL as string | undefined) || undefined;
+
+      if (!serviceId || !templateId || !publicKey) {
+        setSubmitStatus({
+          success: false,
+          message: 'Configuración incompleta de EmailJS. Por favor, verifica las variables de entorno.'
+        });
+        return;
+      }
       
       const templateParams = {
         from_name: values.name,
         from_email: values.email,
         phone: values.phone || 'No proporcionado',
         message: values.message,
+        subject: `Nuevo mensaje de contacto - ${values.name}`,
+        ...(toEmail ? { to_email: toEmail } : {}),
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
