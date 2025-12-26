@@ -1,0 +1,44 @@
+Actúa como un desarrollador React/TypeScript experto con dominio en Tailwind CSS y animaciones CSS.
+
+La aplicación es un sitio React con Vite, React Router v6 y Tailwind CSS. La página de inicio (ruta "/") renderiza el componente Home, que incluye <Hero /> y otras secciones. El diseño actual es de tema oscuro (fondo negro #0F0F0F, texto blanco), sin elementos festivos visibles.
+
+Debo agregar un banner navideño temporal solo en la ruta principal "/", visible solo durante diciembre (usa JavaScript para verificar la fecha actual y ocultar fuera de este período).
+
+El banner consistirá en dos partes:
+1. Una imagen de guirnalda navideña con campanas como fondo: src="/images/guirnaldas_navideñas.png" (PNG con fondo transparente, colocado en public/images de cada instancia cliente). Debe ocupar el ancho completo y tener altura automática, responsiva, con posicionamiento relativo o absolute para no desplazar el contenido subyacente.
+2. Superpuesto al centro inferior de la imagen, un banner deslizable (ticker/marquee horizontal) con movimiento continuo de izquierda a derecha, conteniendo el texto: "Felices Fiestas!! Les deseamos desde O3 Energy Mexico!!" 
+   - El texto debe ser en color blanco (#FFFFFF) o rojo festivo (#dc2626) con alto contraste para visibilidad en fondo oscuro, bold, tamaño grande (text-2xl en móvil, text-4xl en desktop).
+   - El banner deslizable debe tener fondo semi-transparente oscuro (bg-black/60) para legibilidad.
+   - Animación suave e infinita, con velocidad moderada (duración aprox. 20-30 segundos por ciclo).
+   - Implementar con CSS puro (@keyframes) y clases Tailwind, sin librerías externas.
+
+Coloca el banner completo justo antes de <Hero /> dentro del componente Home (o directamente en la Route "/").
+
+Requisitos adicionales:
+- Responsivo en todos los dispositivos, con pruebas en móviles para evitar overflows.
+- No interferir con el layout existente ni con el Header (que es fijo o sticky en diseños típicos).
+- Animación fluida y accesible (incluir preferencias de movimiento reducido si es posible, e.g., @media (prefers-reduced-motion)).
+- Fácil de remover después de las fiestas (envuelto en un componente ChristmasBanner; incluye lógica condicional para fechas).
+- Si existe variable de entorno VITE_COMPANY_NAME, usarla para personalizar el texto (ej. "desde {companyName}!!"); de lo contrario, usar el texto fijo "desde O3 Energy Mexico!!".
+- Priorizar accesibilidad: aria-label descriptivo para el banner.
+
+Código actual completo de src/App.tsx:
+
+[Inserte aquí todo el contenido de App.tsx proporcionado previamente]
+
+Código actual completo de src/index.css:
+
+[Inserte aquí todo el contenido de index.css proporcionado previamente]
+
+Proporciona:
+1. Código completo modificado de src/App.tsx, con el nuevo componente ChristmasBanner integrado en el componente Home, incluyendo la verificación de fecha (e.g., new Date().getMonth() === 11).
+2. Estilos nuevos a agregar en src/index.css (dentro de @layer components y @layer utilities, incluyendo los @keyframes para la animación deslizable).
+3. Ejemplo de acceso a la variable: const companyName = import.meta.env.VITE_COMPANY_NAME || 'O3 Energy Mexico';
+4. Instrucciones claras para implementación:
+   - Colocar el archivo guirnaldas_navideñas.png en la carpeta public/images de cada instancia.
+   - Ejecutar rebuild (npm run build) y desplegar.
+   - Para revertir: eliminar o comentar el componente ChristmasBanner, o ajustar la condicional de fecha.
+5. Si aplica, versiones adaptadas para otros clientes variando solo el nombre en el texto o variable.
+
+Asegura cambios mínimos, compatibilidad total con móviles y que el banner no afecte otras rutas.
+```

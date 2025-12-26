@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados */
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-white font-bold py-2 px-4 rounded transition-colors;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
+
+/* Estilos específicos para campos de entrada del cotizador */
+@layer utilities {
+  .calculator-input {
+    background-color: white !important;
+    color: #111827 !important;
+  }
+  
+  .calculator-input::placeholder {
+    color: #6b7280 !important;
+  }
+  
+  .calculator-input:focus {
+    background-color: white !important;
+    color: #111827 !important;
+  }
+  
+  .calculator-button {
+    color: #111827 !important;
+  }
+  
+  .calculator-button h4 {
+    color: #111827 !important;
+  }
+  
+  .calculator-button p {
+    color: #6b7280 !important;
+  }
+  
+  .calculator-nav-button {
+    color: #111827 !important;
+  }
+}
