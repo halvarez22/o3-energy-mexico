@@ -52,35 +52,4 @@
   .calculator-nav-button {
     color: #111827 !important;
   }
-
-  /* Animación para banner navideño deslizable */
-  .marquee-text {
-    animation: marquee 25s linear infinite;
-    will-change: transform;
-  }
-
-  .marquee-text.no-animation {
-    animation: none;
-  }
-
-  .text-shadow-lg {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), 0px 0px 8px rgba(243, 111, 32, 0.5);
-  }
-
-  /* Keyframes para la animación marquee */
-  @keyframes marquee {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  /* Respetar preferencias de movimiento reducido */
-  @media (prefers-reduced-motion: reduce) {
-    .marquee-text {
-      animation: none;
-    }
-  }
 }
