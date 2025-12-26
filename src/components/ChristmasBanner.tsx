@@ -24,21 +24,21 @@ const ChristmasBanner: React.FC = () => {
       role="banner"
     >
       {/* Imagen de fondo con guirnaldas navideñas */}
-      <div className="w-full relative">
+      <div className="w-full relative banner-container overflow-hidden">
         <img
           src="/images/guirnaldas_navideñas.png"
           alt="Guirnaldas navideñas decorativas con campanas"
-          className="w-full h-auto object-cover"
+          className="w-full h-full object-contain sm:object-cover"
           loading="eager"
         />
 
         {/* Banner deslizable superpuesto */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm py-3 md:py-4 overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm py-2 sm:py-3 md:py-4 overflow-hidden">
           <div
             className={`whitespace-nowrap text-center marquee-text ${prefersReducedMotion ? 'no-animation' : ''}`}
             aria-live="polite"
           >
-            <span className="inline-block font-bold text-2xl md:text-4xl px-4 text-shadow-lg" style={{ color: '#f36f20' }}>
+            <span className="inline-block font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl px-2 sm:px-4 text-shadow-lg" style={{ color: '#f36f20' }}>
               🎄 Felices Fiestas!! Les deseamos desde {companyName}!! 🎅
             </span>
           </div>
@@ -74,6 +74,18 @@ const ChristmasBanner: React.FC = () => {
           .marquee-text {
             animation: none;
           }
+        }
+
+        /* Estilos responsivos para asegurar que la imagen se vea completa */
+        @media (max-width: 640px) {
+          .marquee-text {
+            animation-duration: 20s; /* Más rápido en móviles para mejor UX */
+          }
+        }
+
+        /* Asegurar que el contenedor tenga altura mínima en todos los dispositivos */
+        .banner-container {
+          min-height: clamp(200px, 25vh, 350px);
         }
       `}</style>
     </section>
