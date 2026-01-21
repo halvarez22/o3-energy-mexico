@@ -10,7 +10,6 @@ import Team from './components/Team';
 import Locations from './components/Locations';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ChristmasBanner from './components/ChristmasBanner';
 import ChatbotWidget from './components/Chatbot/ChatbotWidget';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -63,7 +62,6 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <ChristmasBanner />
       <Hero />
       <About />
       <Services />
