@@ -4,6 +4,7 @@ import { NavLink, Service, Project, TeamMember, SocialLink } from './types';
 export const NAV_LINKS: NavLink[] = [
   { href: '#about', label: 'Sobre O3' },
   { href: '/soluciones-energeticas', label: 'Soluciones' },
+  { href: '/soluciones-energeticas/almacenamiento-energia', label: 'Sistemas BESS' },
   { href: '/cotizador', label: 'Cotizador' },
   { href: '#services', label: 'Servicios' },
   { href: '#projects', label: 'Proyectos' },

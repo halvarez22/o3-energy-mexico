@@ -45,6 +45,13 @@ const EnergySolutionsPage: React.FC = () => {
       description: 'Soluciones para optimizar el consumo de energía y reducir costos operativos en sus instalaciones.',
       link: '/soluciones-energeticas/eficiencia-energetica',
       linkText: 'Más información'
+    },
+    {
+      icon: <FaCarBattery className="w-12 h-12 text-[#f36f20] mb-4" />,
+      title: 'Almacenamiento de Energía',
+      description: 'Sistemas de baterías avanzados para máxima independencia energética y optimización de su producción solar.',
+      link: '/soluciones-energeticas/almacenamiento-energia',
+      linkText: 'Descubrir soluciones'
     }
   ];
 
