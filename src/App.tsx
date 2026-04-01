@@ -1,5 +1,5 @@
 
-import { useEffect, Suspense, lazy, useState } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -74,66 +74,33 @@ const Home: React.FC = () => {
   );
 };
 
-const WarningPage: React.FC = () => {
-  const [showImage, setShowImage] = useState(true);
-
-  return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-12 bg-[#0F0F0F] text-white">
-      <div className="w-full max-w-3xl text-center">
-        {showImage ? (
-          <img
-            src="/images/warning_1774971664.png"
-            alt="Cuenta con pago pendiente"
-            className="w-full h-auto rounded-xl shadow-2xl"
-            onError={() => setShowImage(false)}
-          />
-        ) : (
-          <div className="rounded-xl border border-yellow-500/40 bg-yellow-500/10 p-8">
-            <h1 className="text-3xl font-bold text-yellow-300">Pago pendiente</h1>
-            <p className="mt-3 text-lg text-yellow-100">
-              Tu cuenta presenta un adeudo. Realiza tu pago para reactivar el acceso.
-            </p>
-          </div>
-        )}
-      </div>
-    </section>
-  );
-};
-
 const App: React.FC = () => {
-  // Modo prueba: forzamos warning al entrar sin integrar pasarela.
-  const FORCE_WARNING_PAGE = true;
-
   return (
     <div className="bg-[#0F0F0F] text-white">
       <ScrollToTop />
-      {!FORCE_WARNING_PAGE && <Header />}
+      <Header />
       <main>
-        {FORCE_WARNING_PAGE ? (
-          <WarningPage />
-        ) : (
-          <Suspense fallback={<div className="flex justify-center items-center h-screen">Cargando...</div>}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/proyectos" element={<ProjectsPage />} />
-              <Route path="/cotizador" element={<CalculatorPage />} />
-              <Route path="/soluciones-energeticas" element={<EnergySolutionsPage />} />
-              <Route path="/soluciones-energeticas/epc-solar" element={<EPCSolarPage />} />
-              <Route path="/soluciones-energeticas/desarrollo-proyectos" element={<SolarProjectDevelopmentPage />} />
-              <Route path="/soluciones-energeticas/instalacion-solar" element={<SolarInstallationPage />} />
-              <Route path="/soluciones-energeticas/financiamiento" element={<SolarFinancingPage />} />
-              <Route path="/soluciones-energeticas/mantenimiento" element={<SolarMaintenancePage />} />
-              <Route path="/soluciones-energeticas/eficiencia-energetica" element={<EnergyEfficiencyPage />} />
-              <Route path="/soluciones-energeticas/almacenamiento-energia" element={<EnergyStoragePage />} />
-            </Routes>
-          </Suspense>
-        )}
+        <Suspense fallback={<div className="flex justify-center items-center h-screen">Cargando...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/proyectos" element={<ProjectsPage />} />
+            <Route path="/cotizador" element={<CalculatorPage />} />
+            <Route path="/soluciones-energeticas" element={<EnergySolutionsPage />} />
+            <Route path="/soluciones-energeticas/epc-solar" element={<EPCSolarPage />} />
+            <Route path="/soluciones-energeticas/desarrollo-proyectos" element={<SolarProjectDevelopmentPage />} />
+            <Route path="/soluciones-energeticas/instalacion-solar" element={<SolarInstallationPage />} />
+            <Route path="/soluciones-energeticas/financiamiento" element={<SolarFinancingPage />} />
+            <Route path="/soluciones-energeticas/mantenimiento" element={<SolarMaintenancePage />} />
+            <Route path="/soluciones-energeticas/eficiencia-energetica" element={<EnergyEfficiencyPage />} />
+            <Route path="/soluciones-energeticas/almacenamiento-energia" element={<EnergyStoragePage />} />
+          </Routes>
+        </Suspense>
       </main>
-      {!FORCE_WARNING_PAGE && <Footer />}
-
+      <Footer />
+      
       {/* Chatbot Widget */}
-      {!FORCE_WARNING_PAGE && <ChatbotWidget />}
-      {!FORCE_WARNING_PAGE && <WhatsAppButton />}
+      <ChatbotWidget />
+      <WhatsAppButton />
     </div>
   );
 };
